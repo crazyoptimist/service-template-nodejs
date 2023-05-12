@@ -1,0 +1,18 @@
+.vscode
+*.log
+node_modules/
+*.out
+!*.secret
+*.env
+.nyc_output/
+*.crt
+
+# jest
+coverage
+
+# typescript builds
+dist
+.build
+
+# use npm
+yarn.lock
