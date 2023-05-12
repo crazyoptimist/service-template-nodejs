@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Generated from service-template-nodejs",
   "scripts": {
+    "prestart": "npm run build",
     "start": "node dist/main.js",
     "dev": "nodemon",
     "build": "tsc --incremental",
