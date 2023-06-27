@@ -1,10 +1,18 @@
-.vscode
-*.log
+# dependencies
 node_modules/
+yarn.lock
+
+# IDE
+.vscode/
+
+# logs
 *.out
+*.log
+.nyc_output/
+
+# env files
 !*.secret
 *.env
-.nyc_output/
 *.crt
 
 # jest
@@ -13,6 +21,3 @@ coverage
 # typescript builds
 dist
 .build
-
-# use npm
-yarn.lock

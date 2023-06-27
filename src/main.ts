@@ -1,3 +1,6 @@
+import { config } from 'dotenv';
+config();
+
 import { FOO } from './config';
 import { logger } from './utils/logger';
 

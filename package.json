@@ -5,7 +5,7 @@
   "scripts": {
     "prestart": "npm run build",
     "start": "node dist/main.js",
-    "dev": "nodemon",
+    "dev": "nodemon src/main.ts",
     "build": "tsc --incremental",
     "format": "prettier . --write",
     "prepare": "husky install",
@@ -27,9 +27,12 @@
     "nodemon": "^2.0.22",
     "prettier": "^2.8.7",
     "ts-jest": "^29.1.0",
+    "ts-node": "^10.9.1",
     "typescript": "^5.0.4"
   },
   "lint-staged": {
-    "*.{js,mjs,ts,json}": ["prettier --write"]
+    "*.{js,mjs,ts,json}": [
+      "prettier --write"
+    ]
   }
 }
