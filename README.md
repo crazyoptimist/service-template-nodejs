@@ -4,7 +4,7 @@
 
 ### Project Structure
 
-- `src/main.js` is the starting point of the application, keep it short and simple.
+- `src/main.ts` is the starting point of the application, keep it short and simple.
 - `src/helpers` is where we organize broken-down modules that runs business logics, create sub folders if needed.
 - `src/config` is where we organize application global configurations and constants. Every environment variables should be verified(and maybe re-organized as nested objects if we prefer) in src/config. We should not read env vars directly like process.env.FOO, because it's hard to track what's used where.
 - `src/utils` is where we organize utility functions that doesn't contain any business logics
