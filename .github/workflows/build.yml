@@ -3,7 +3,7 @@ name: Build
 on:
   push:
     branches:
-     - main
+      - main
   pull_request:
     types: [opened, edited, synchronize, reopened, closed]
     branches:
@@ -13,19 +13,19 @@ jobs:
   build:
     name: Compile Typescript
     runs-on: ubuntu-latest
-    if: ${{ !contains( github.event.head_commit.message, 'dependabot:' )  }}
+    if: ${{ !contains( github.event.head_commit.message, 'dependabot:' ) }}
     strategy:
       matrix:
-        node-version: [18.x]
+        node-version: ["18.x"]
 
     steps:
       - name: Checkout the source code
         uses: actions/checkout@v3
 
-      - name: Setup Node.js ${{ matrix.node-version  }}
+      - name: Setup Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version  }}
+          node-version: ${{ matrix.node-version }}
           cache: 'npm'
 
       - name: Install dependancies
